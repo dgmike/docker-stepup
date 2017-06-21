@@ -5,7 +5,15 @@
 You don't need to install `ruby` on your system, you don't need to install `stepup`, you just need `docker`!
 
 ```sh
-docker run -v $PWD:/app --rm --tty --interactive dgmike/stepup version -n
+docker run \
+  --rm \
+  --tty \
+  --interactive \
+  -v $PWD:/app \
+  -v $HOME/.ssh:/home/stepup/.ssh \
+  -v $HOME/.gitconfig:/home/stepup/.gitconfig \
+  dgmike/stepup \
+  version -n
 ```
 
 **Tip:** create and alias to the last command and use as original `stepup`.
