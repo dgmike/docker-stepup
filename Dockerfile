@@ -4,6 +4,7 @@ RUN apk add --update \
 	busybox \
 	git \
 	nano \
+	openssh \
 	vim
 
 ENV EDITOR=/usr/bin/vim
